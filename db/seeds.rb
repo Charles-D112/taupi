@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
+
+lecuirot = User.new(
+  name: 'Lecuirot',
+  email: 'lecuirot@taupi.com',
+  password: '123456'
+)
+
+# List.new(
+#   name: 'Courses'
+# )
+
+# eau = Tuto.new(
+#   name: "Eteindre l'eau chaude",
+#   description: 'Dans la chambre du haut - Derriere le bureau'
+# )
