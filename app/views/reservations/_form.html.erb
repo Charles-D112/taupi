@@ -1,0 +1,10 @@
+  <%= simple_form_for(@reservation) do |f| %>
+    <%= f.input :arrival, required: true,
+                as: :string,
+                input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :departure, required: true,
+                as: :string,
+                input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :comment %>
+    <%= f.submit "Soumettre", class: "btn btn-primary" %>
+  <% end %>
