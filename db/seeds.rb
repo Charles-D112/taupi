@@ -13,6 +13,14 @@ lecuirot = User.new(
   password: '123456'
 )
 
+Reservation.new(
+  arrival: '6/10/2023',
+  departure: '8/10/2023',
+  comment: "Avec petit Jules",
+  status: "A venir",
+  user_id: lecuirot
+)
+
 # List.new(
 #   name: 'Courses'
 # )
