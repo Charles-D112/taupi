@@ -5,27 +5,29 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-require "open-uri"
+# require "open-uri"
 
-lecuirot = User.new(
+# Tuto.destroy_all
+User.destroy_all
+Task.destroy_all
+List.destroy_all
+
+lecuirot = User.create!(
   name: 'Lecuirot',
   email: 'lecuirot@taupi.com',
   password: '123456'
 )
 
-Reservation.new(
-  arrival: '6/10/2023',
-  departure: '8/10/2023',
-  comment: "Avec petit Jules",
-  status: "A venir",
-  user_id: lecuirot
+courses = List.create!(
+  name: 'Courses'
 )
 
-# List.new(
-#   name: 'Courses'
-# )
-
-# eau = Tuto.new(
+# eau = Tuto.create!(
 #   name: "Eteindre l'eau chaude",
 #   description: 'Dans la chambre du haut - Derriere le bureau'
 # )
+
+Task.create!(
+  name: 'Carottes',
+  list: courses
+)
