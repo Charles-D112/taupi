@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container w-50 mt-5">
   <h1>Réservations</h1>
 
   <% @reservations.each do |reservation| %>
@@ -10,7 +10,7 @@
         <p><strong>Commentaire :</strong> <%= reservation.comment %></p>
         <%= link_to "Edit", edit_reservation_path(reservation), class: "btn btn-primary" %>
         <br>
-        <%= link_to "Supprimer", reservation_path(reservation), class: "btn btn-primary", data: { turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer le tuto définitivement ?" } %>
+        <%= link_to "Supprimer", reservation_path(reservation), class: "btn btn-primary", data: { turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer la réservation définitivement ?" } %>
       </div>
     </div>
   <% end %>
