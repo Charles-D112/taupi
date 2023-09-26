@@ -3,5 +3,14 @@
   <h1><%= @tuto.name %></h1>
     <p><strong>Instruction :</strong> <%= @tuto.description %></p>
     <p> <% if @tuto.url.present? %> <strong>URL :</strong> <%= link_to @tuto.url, @tuto.url %><% end %></p>
+		<% @tuto.photos.each do |photo| %>
+		  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+		<% end %>
+</div>
 
+<div class="container w-50 mt-5">
+    <%= link_to "Editer Tutos", edit_tuto_path(@tuto), class: "btn btn-primary" %>
+    <%= link_to "Supprimer le tuto", tuto_path(@tuto), class: "btn btn-primary",  data: { turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer le tuto définitivement ?" } %>
+  <br>
+    <%= link_to "Retour Tutos", tutos_path %>
 </div>
